@@ -1,0 +1,236 @@
+/* Sección About index */
+.backAbout {
+  background-color: #0d1321;
+  display: flex;
+  flex-direction: column;
+}
+.containerAbout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.infoAbout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". textAbout textAbout"
+    ". textAbout textAbout"
+    ". button    button   "
+    "aboutPlus aboutPlus aboutPlus";
+  grid-area: 1 / 1 / 3 / 3;
+  padding: 3rem 1rem 3rem 0;
+}
+
+.textAbout {
+  grid-area: textAbout;
+  color: white;
+  width: 70%;
+  justify-self: end;
+  align-self: center;
+  padding: 1rem;
+}
+.textAbout h2 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.textAbout p {
+  text-align: justify;
+}
+.buttonAbout {
+  grid-area: button;
+  padding: 1rem;
+  width: 70%;
+  text-align: center;
+  align-content: center;
+  justify-self: end;
+  height: fit-content;
+}
+
+.btnAbout {
+  padding: 0.5rem;
+  justify-self: center;
+  width: clamp(6rem, 50%, 10rem);
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 2px solid #43b4ff;
+  border-radius: 6px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.btnAbout:hover {
+  background-color: #43b4ff;
+  font-weight: bolder;
+  color: white;
+}
+.imgAbout {
+  grid-area: 1 / 1 / 3 / 2;
+  background-image: url(../IMG/overlayBlueBlack.svg), url(../IMG/About.avif);
+  background-repeat: no-repeat, repeat;
+  background-position: right, center;
+  background-size: cover, cover;
+}
+
+/* Sección expandida About Plus */
+.containerAboutPlus {
+  grid-area: aboutPlus;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "containerMision containerVision"
+    "containerObjetivos containerObjetivos";
+  color: white;
+  background-color: #0d1321;
+  background-image: url("/IMG/Icons/Favicon.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.containerMision {
+  grid-area: containerMision;
+  background-color: #0d1321;
+  filter: opacity(0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.containerVision {
+  grid-area: containerVision;
+  background-color: #0d1321;
+  filter: opacity(0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.containerObjetivos {
+  grid-area: containerObjetivos;
+  background-color: #0d1321;
+  filter: opacity(0.95);
+  padding: 2rem;
+}
+
+.containerAboutPlus h2,
+.containerAboutPlus p {
+  text-align: center;
+  align-self: center;
+}
+.containerAboutPlus ul {
+  padding: 0 0 0 2rem;
+}
+.containerAboutPlus span {
+  font-weight: bold;
+}
+.containerAboutPlus li {
+  list-style: none;
+  padding-left: 4%;
+  position: relative;
+}
+.containerAboutPlus li::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  background-image: url("/IMG/Icons/goal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.containerMision:hover {
+  background-color: #eef36a;
+  color: #0d1321;
+  text-shadow: 0px 1px 1px rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+.containerVision:hover {
+  background-color: #63d471;
+  color: #0d1321;
+  text-shadow: 0px 1px 1px rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+.containerObjetivos:hover {
+  background-color: #d65780;
+
+  text-shadow: 0px 1px 3px rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+.containerAboutPlus {
+  display: none;
+}
+.active {
+  display: grid;
+}
+
+/* Seccion historia */
+.backHistoria {
+  background-color: #fbfbff;
+}
+.containerHistoria {
+  padding: 2rem;
+  background-color: #fbfbff;
+}
+.imgHistoria {
+  height: clamp(15rem, 25vw, 40rem);
+  width: clamp(15rem, 25vw, 40rem);
+  margin: 1rem;
+  border-radius: 0.5rem;
+
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 1px 3px #0d1321;
+  transition: all 0.5s ease;
+}
+#img1 {
+  background-image: url(../IMG/Colegio-edificio.JPG);
+  float: right;
+}
+#img2 {
+  background-image: url(../IMG/Profesores.jpg);
+  float: left;
+  top: 0;
+}
+.containerHistoria h1 {
+  color: #43b4ff;
+  text-shadow: 0px 1px 1px rgb(255, 255, 255), 0px 1px 3px rgba(0, 0, 0, 0.308);
+}
+.containerHistoria p {
+  text-align: justify;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 460px) {
+  .infoAbout {
+    grid-template-areas:
+      "textAbout textAbout textAbout"
+      "textAbout textAbout textAbout"
+      "button    button    button   "
+      " aboutPlus aboutPlus aboutPlus";
+  }
+  .containerAboutPlus {
+    grid-template-columns: 1fr;
+    grid-template-areas: "containerMision" "containerVision" "containerObjetivos";
+  }
+
+  .imgHistoria {
+    height: clamp(7rem, 25vw, 40rem);
+    width: clamp(7rem, 25vw, 40rem);
+  }
+}

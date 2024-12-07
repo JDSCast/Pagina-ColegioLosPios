@@ -1,0 +1,186 @@
+/* Base Form  */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerForm {
+  label,
+  textarea {
+    padding: .5em 0 0.05rem 0;
+    width: 100%;
+  }
+
+  input:not([type="checkbox"]),
+  textarea {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(156, 156, 156, 0.474);
+    width: 100%;
+    min-height: 1rem;
+    min-width: 3rem;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    border: 0.15em solid rgba(156, 156, 156, 0.474);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    transition: 120ms transform ease-in-out;
+    transform: scale(0);
+    background-color: #000000ce;
+    transform-origin: center;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input:hover,
+  textarea:hover {
+    background-color: whitesmoke;
+    transition: all 0.2s ease;
+  }
+  form > button[type="submit"] {
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 0%, 0.5);
+  }
+
+  form > button[type="submit"]:hover {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.5);
+  }
+
+  form > button[type="submit"]:active {
+    color: white;
+    background-color: hsl(0, 0%, 42%);
+    scale: 0.95;
+    transition: all 0.2s ease;
+  }
+  input:indeterminate{
+    background-color: #32a1ce;
+  }
+  input:optional {
+    border-color: gray;
+  }
+  input:required:valid{
+    border-color: green;
+  }
+  input:user-invalid {
+    border-color: red;
+  }
+  input:required:focus:valid {
+    background: rgba(144, 238, 144, 0.45);
+
+  }
+  input:focus:user-invalid {
+    background:  rgba(255, 160, 122, 0.45);
+  }
+
+
+}
+/* Styles Form Contáctenos */
+.backFormContact {
+    background: #fbfbff;
+}
+.containerFormContact {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.1fr 1.9fr; 
+    gap: 0px 0px; 
+}
+.tituloFormContact {
+  grid-area: 1 / 1 / 2 / 3;
+  padding: 2rem;
+  background-color: #43b4ff;
+  position: relative;
+  
+}
+.tituloFormContact h1{
+    color: #fbfbff;
+    text-shadow: 0 1px 2px #0d1321;
+    
+}
+.tituloFormContact div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(0.5rem, 2vw, 1.2rem);
+    height: 100%;
+    background: rgb(13,19,33);
+    background: rgb(13,19,33);
+    background: rgb(13,19,33);
+    background: linear-gradient(180deg, rgba(13,19,33,1) 6%, rgba(214,87,128,1) 6%, rgba(214,87,128,1) 33%, rgba(238,243,106,1) 33%, rgba(238,243,106,1) 64%, rgba(99,212,113,1) 64%, rgba(99,212,113,1) 90%, rgba(13,19,33,1) 90%); 
+}
+.imgFormContact {
+  grid-area: 2 / 1 / 3 / 3;
+  height: 100%;
+    
+
+}
+
+.formContact {
+  grid-area: 2 / 1 / 3 / 3;
+  width: clamp(70%, 20%, 80%);
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1 solid rgba(156, 156, 156, 0.5);
+  outline: 0.3rem solid #fbfbff28;
+  outline-offset: 0;
+
+}
+
+.formContact div label{
+    padding: 1rem 0 1rem 1rem;
+}
+
+.formContact input:focus,
+textarea:focus {
+  outline: 0.2rem double #32a1ce;
+  outline-offset: -4px;
+  scale: 1.01;
+  box-shadow: 0 0 5px #32a1ce;
+  transition: all 0.2s ease-in-out;
+}
+
+.formContact {
+    background: white;
+    border-radius: 10px;
+    margin: 1rem;
+    justify-self: center;
+}
+
+.formContact div {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.formContact div > label {
+  width: 70%;
+  text-align: justify;
+}
+
+.formContact {
+  justify-content: center;
+}

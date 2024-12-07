@@ -1,0 +1,164 @@
+/* Estructura main del modal */
+.backModal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.containerModal {
+  position: fixed;
+  background-color: #fbfbff;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.5);
+  width: clamp(10rem, 80%, 50rem);
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  animation: showZoom 0.2s, divFadeIn 0.3s ease;
+}
+
+/* Estilos para el formulario de inicio */
+.containerLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backLogo {
+  width: max-content;
+  height: max-content;
+  
+  padding: 1rem;
+  background-color: rgb(238, 236, 236);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+.formLogin {
+  align-items: center;
+  justify-content: center;
+}
+.formLogin small {
+  width: 100%;
+}
+
+#btnLogin {
+  margin: 0.5rem;
+}
+
+#closeModal {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(90, 90, 90);
+  background-repeat: no-repeat;
+  mask: url(../IMG/Icons/close-solid-svgrepo-com.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  color: rgb(90, 90, 90);
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#closeModal:hover {
+  color: red;
+  background-color: red;
+  transition: all 0.2s ease;
+}
+#btnLogin {
+  font-weight: bold;
+}
+
+#btnLogin:hover {
+  color: white;
+  background-color: #43b4ff;
+}
+.containerModal a{
+	color: #0d1321;
+	
+}
+.containerModal #registro a>span{
+	color: #d65780;
+}
+.containerModal #inicio a:active{
+	color: #d65780;
+}
+.containerModal #registro a:active{
+	color: #63d471;
+}
+.containerModal a:visited{
+	color: #0d1321;
+}
+.containerModal  a:hover{
+	color: #43b4ff;
+}
+
+/* Estilos formulario de registro */
+.containerSignup {
+  animation: divFadeIn 0.3s ease;
+}
+.formSignup {
+  align-items: center;
+  justify-content: center;
+}
+.formSignup small {
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+#btnSignup {
+  font-weight: bold;
+}
+
+#btnSignup:hover {
+  color: white;
+  background-color: #d65780;
+}
+
+@keyframes showZoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes divFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.lineSpace{
+	height: 1rem;
+	width: 100%;
+}
+.hide {
+  display: none;
+  transition: fadeOut 5.5s ease-in-out;
+}

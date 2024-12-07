@@ -1,0 +1,107 @@
+.backServicios{
+  background-color: #fbfbff;
+  display: grid;
+}
+
+.containerServicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 3%;
+  justify-items: center;
+  align-items: center;
+  padding: 10rem 1rem 10rem 1rem;
+  
+}
+
+.servicioCard {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 1em 0%;
+  height: 100%;
+}
+
+.iconServicio {
+  justify-self: center;
+  align-self: center;
+  width: clamp(3rem, 50%, 5rem);
+}
+
+.servicioCard:hover {
+  scale: 1.03;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0px 0px 2px #0d132161)
+}
+
+@keyframes fadeText {
+  100% {
+    color: #00000000;
+  }
+}
+
+.textServicio {
+  background-color: white;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  display: grid;
+  gap: 1rem;
+}
+
+.textServicio h2 {
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  animation: fadeText .5s ease alternate-reverse backwards;
+  height: fit-content;
+}
+
+.textServicio h2::after {
+  content: "";
+  border-bottom: 5px solid #43b4ff;
+  text-shadow:0px 0px 3px rgba(0, 0, 0, 0.5) ;
+  width: 0%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.textServicio h2:hover {
+  transition: all 0.5s;
+}
+
+
+
+.servicioCard:hover .textServicio h2::after {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1920px) {
+  .containerServicios{
+    padding: 2rem;
+  }
+
+}
+@media only screen and (max-width: 800px) {
+  .containerServicios{
+    padding: 1rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 460px) {
+  .containerServicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem 0;
+   
+  }
+  .servicioCard{
+    width: 70%;
+  }
+  .textServicio{
+    grid-template-rows:  0.5fr 1fr;
+    gap: 1rem 0;
+  }
+}

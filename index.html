@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Los Pios - Inicio</title>
+    <link rel="shortcut icon" href="./IMG/Icons/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/styleReset.css">
+    <link rel="stylesheet" href="./CSS/styleIndex.css">
+    <link rel="stylesheet" href="./CSS/styleBanner.css">
+    <link rel="stylesheet" href="./CSS/styleServicios.css">
+    <link rel="stylesheet" href="./CSS/styleAbout.css">
+    <link rel="stylesheet" href="./CSS/styleForms.css">
+    <link rel="stylesheet" href="./CSS/styleLoginModal.css">
+    <script src="/JS/Index.js" defer></script>
+</head>
+
+<body>
+    <div class="backModal hide" id="backModal" onclick="toggleClassById('backModal','hide'); return false">
+    <div class="containerModal" onclick="event.stopPropagation()">
+        <div id="inicio" class="containerForm containerLogin">
+            <span id="closeModal" onclick="toggleClassById('backModal','hide')"
+                title="Cerrar Modal">&times;</span>
+            <div class="backLogo"><img src="./IMG/Icons/Favicon.svg" alt="Avatar" class="logoPIO"></div>
+            <div class="lineSpace"></div>
+            <h2>Inicio de sesión</h2>
+            <form action="javascript: alert('Enviado')"  method="get" class="formLogin">
+                <label for="loginEmail">Correo Electrónico</label><input type="email" name="loginEmail"
+                    placeholder="ejemplo@dominio.com" id="" required><label
+                    for="loginPassword">Contraseña</label><input type="password" name="loginEmail" id=""
+                    required minlength="8" placeholder="Mínimo 8 caracteres">
+                <small><a href="#">¿Has olvidado la contraseña?</a></small><div class="lineSpace"></div>
+                <small><a href="#"
+                        onclick="toggleClassById('registro','hide');toggleClassById('inicio','hide'); return false">¿No
+                        tienes una cuenta? Crea una cuenta</a></small><div class="lineSpace"></div>
+                <button type="submit" id="btnLogin">Ingresar</button>
+            </form>
+        </div>
+        <div id="registro" class="containerForm containerLogin containerSignup hide">
+            <span id="closeModal" onclick="toggleClassById('backModal','hide')"
+                title="Cerrar Modal">&times;</span>
+            <div class="backLogo"><img src="./IMG/Icons/Favicon.svg" alt="Avatar" class="logoPIO"></div>
+            <div class="lineSpace"></div>
+            <h2>Crear una cuenta</h2>
+            <form action="javascript: alert('Enviado')"  method="get" class="formSignup">
+                <label for="signupName">Nombre completo</label><input type="text" name="signupName"
+                    placeholder="Elton Tito" id="" required>
+                <label for="signupEmail">Correo electrónico</label><input type="email" name="signupEmail"
+                    placeholder="ejemplo@dominio.com" id="" required>
+                <label for="signupPassword">Contraseña</label>
+                <input type="password" name="signupEmail" id="" required minlength="8"
+                    placeholder="Mínimo 8 caracteres">
+                    <div class="lineSpace"></div>
+                <small><a href="#"
+                        onclick="toggleClassById('inicio','hide'); toggleClassById('registro','hide'); return false">¿Tienes
+                        una cuenta? Inicia sesión</a></small>
+                        <div class="lineSpace"></div>
+                <button type="submit" id="btnSignup">Crear</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <div class="wrapper">
+        <header class="mainHeader">
+            <div class="columnLogo">
+                <a href="#"><img src="./IMG/Icons/Favicon.svg" alt="Logo del colegio los pios" class="logoPIO"></a>
+            </div>
+
+            <input type="checkbox" name="Checknav" id="check">
+            <label for="check" class="checkbtn">&#9776</label>
+
+
+            <div class="columnNav">
+                <nav class="navbar">
+                    <ul class="listnav">
+                        <li class="listnav item"><a href="#oferta">Oferta</a></li>
+                        <li class="listnav item"><a href="#about">Nosotros</a></li>
+                        <li class="listnav item"><a href="#contact">Contacto</a></li>
+                        <li class="listnav item"><a href="#" onclick="toggleClassById('backModal','hide'); return false">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="content">
+            <div class="backBanner">
+                <section class="containerBanner container">
+                    <img class="imgBanner" src="./IMG/Grupo-estudiantes-2.jpg" alt="Imagen grupo estudiantes Pios">
+                    <div class="containerTextBanner">
+                        <h2 class="tituloBig">Bienvenidos al Colegio Los Pios</h2>
+                        <p class="textBanner">En el Colegio Los Pios, nos dedicamos a formar líderes del mañana con una
+                            educación integral, valores sólidos y un enfoque en el desarrollo personal.</p>
+                    </div>
+
+                </section>
+            </div>
+            <div class="backServicios">
+                <section id="oferta" class="containerServicios container">
+                    <div class="servicioCard" id="SCard1">
+                        <img src="./IMG/Icons/books-svgrepo-com.svg" alt="" class="iconServicio">
+                        <div class="textServicio">
+                            <h2>Educación Integral</h2>
+                            <p>Ofrecemos una educación completa que abarca desde lo académico hasta el desarrollo
+                                personal y social de los estudiantes.</p>
+                        </div>
+                    </div>
+                    <div class="servicioCard" id="SCard2">
+                        <img src="./IMG/Icons/paint-palette-art-svgrepo-com.svg" alt="" class="iconServicio">
+                        <div class="textServicio">
+                            <h2>Actividades Artísticas</h2>
+                            <p>Fomentamos la creatividad a través de talleres de arte, música y teatro, desarrollando
+                                habilidades expresivas en nuestros alumnos.</p>
+                        </div>
+                    </div>
+                    <div class="servicioCard" id="SCard3">
+                        <img src="./IMG/Icons/sports-svgrepo-com.svg" alt="" class="iconServicio">
+                        <div class="textServicio">
+                            <h2>Deportes</h2>
+                            <p>Promovemos la salud y el trabajo en equipo mediante una variedad de deportes y
+                                actividades físicas para todos los niveles.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="backAbout">
+                <section id="about" class="containerAbout container">
+                    <div class="imgAbout"></div>
+                    <div class="infoAbout">
+                        <div class="textAbout">
+                            <h2>Sobre Nosotros</h2> <br>
+                            <p>En el Colegio los PIO, nos comprometemos a formar individuos íntegros y preparados para
+                                enfrentar los desafíos del futuro. Conoce más sobre nuestra misión, visión y objetivos.</p>
+                        </div>
+                        <div class="buttonAbout"><a class="btnAbout" onclick="toggleClassById('AboutPlus','active')" href="#AboutPlus">Conoce
+                                más</a></div>
+                    </div>
+                </section>
+
+                <section id=AboutPlus class="containerAboutPlus container">
+                    <div class="containerMision">
+                        <h2>Misión</h2><br>
+                        <p>En el Colegio Los Pios, nuestra misión es proporcionar una educación integral que fomente el
+                            desarrollo académico, personal y social de nuestros estudiantes, preparándolos para ser
+                            ciudadanos responsables y líderes comprometidos con la sociedad.</p>
+                    </div>
+                    <div class="containerVision">
+                        <h2>Visión</h2><br>
+                        <p>Ser reconocidos como una institución educativa de excelencia, innovadora y comprometida con
+                            la formación de individuos íntegros, capaces de enfrentar los desafíos del futuro con
+                            confianza y responsabilidad.</p>
+                    </div>
+                    <div class="containerObjetivos">
+                        <h2>Objetivos</h2><br>
+                        <ul>
+                            <li><span>Promover la Excelencia Académica:</span> Garantizar un alto nivel de rendimiento
+                                académico mediante la implementación de programas educativos de calidad y la formación
+                                continua del personal docente.</li>
+                            <br>
+                            <li><span>Fomentar Valores y Ciudadanía:</span> Inculcar valores fundamentales como el
+                                respeto, la responsabilidad y la solidaridad, formando ciudadanos comprometidos y
+                                conscientes de su papel en la sociedad.</li>
+                            <br>
+                            <li><span>Desarrollar Competencias Globales:</span> Preparar a los estudiantes para un mundo
+                                globalizado mediante el fortalecimiento de habilidades lingüísticas y el uso de
+                                tecnologías innovadoras en el proceso educativo.</li>
+                            <br>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="backHistoria mainflex">
+                <section class="containerHistoria container">
+                    <h1>Nuestra historia...</h1><br>
+                    <div id="img1" class="imgHistoria" alt="Imagen del antiguo edificio"></div>
+                    <p>El Colegio Los Pios fue fundado en <span>1997 </span>con el objetivo de proporcionar una educación integral y de calidad a los jóvenes de nuestra comunidad. Desde sus inicios, el colegio ha sido un pilar fundamental en la formación académica y personal de sus estudiantes, promoviendo valores como la responsabilidad, el respeto y la solidaridad. <br><br>
+                        A lo largo de los años, el colegio ha experimentado diversas transformaciones y mejoras. En 2014, se llevó a cabo una importante remodelación de las instalaciones, ampliando y modernizando los espacios educativos para adaptarse a las necesidades contemporáneas. <div id="img2" class="imgHistoria" alt="Grupo de maestros del colegio los Pios"></div>
+                        Este esfuerzo ha permitido que el Colegio Los Pios se mantenga a la vanguardia en términos de infraestructura y recursos pedagógicos. <br> <br>
+                        
+                        El compromiso del colegio con la excelencia académica se refleja en los logros de sus estudiantes, quienes han destacado en diversas áreas del conocimiento y han contribuido positivamente a la sociedad. Además, el colegio ha fomentado una estrecha colaboración con las familias, reconociendo la importancia de una educación compartida entre el hogar y la escuela.
+                        Hoy en día, el Colegio Los Pios continúa su misión de formar ciudadanos íntegros y comprometidos, preparados para enfrentar los desafíos del futuro con confianza y determinación.
+                        </p>
+                        
+                </section>
+            </div>
+            <div class="backFormContact mainflex">
+                <section id="contact" class="containerFormContact containerForm container">
+                    <div class="tituloFormContact">
+                        <h1>¿Tienes preguntas?</h1>
+                        <p>¡Regístrate y participa en nuestra visita guiada! Donde conocerás la metodología y propuesta
+                            educativa de
+                            nuestro colegio.</p>
+                        <div></div>
+                    </div>
+                    <img class="imgFormContact" src="./IMG/Grupo-estudiantes.jpg" alt="Foto grupo de adolescentes">
+                    <form class="formContact" action="javascript: alert('Enviado')" method="get">
+                        <h1>Contáctanos</h1><br><br><br>
+                        <label for="nomAcudiente">Nombre Papá/Mamá o Acudiente</label>
+                        <input type="text" name="nomAcudiente" id="nomAcudiente" placeholder="Nombre completo" required>
+                        <label for="emailAcudiente">Correo Electrónico</label>
+                        <input type="email" name="emailAcudiente" id="email" placeholder="Email del acudiente" required>
+                        <label for="telAcudiente">Número de Contacto</label>
+                        <input type="tel" name="telAcudiente" id="telAcudiente" placeholder="Teléfono/Celular" size="20" minlength="10"
+                        maxlength="13" required>
+                        <label for="nomAspirante">Nombre del Aspirante</label>
+                        <input type="text" name="nomAspirante" id="nomAspirante" placeholder="Nombre completo del niñ@"  required>
+                        <label for="curso">Curso deseado</label>
+                        <input type="text" name="curso" id="curso" placeholder="Grado al que desea aspirar" required>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje o detalles adicionales" required></textarea>
+                        <div>
+                            <input id="privacy" type="checkbox" name="privacy" id="" required>
+                            <label for="privacy">Acepta nuestras políticas de privacidad y tratamiento de datos</label>
+                        </div>
+                        <button type="submit"><span>Enviar</span></button>
+                    </form>
+                    </section>
+            </div>
+        </main>
+        <footer class="mainFooter">
+            <div class="rowFooter">
+                <div class="infoContact">
+                    <h2>Información de Contacto</h2>
+                    <ul class="listFooter">
+                        <li class="listFooter item">
+                            <p><span class="subText">Dirección:</span> Calle Principal #123, Zarzal, Valle del Cauca,
+                                Colombia</p>
+                        </li>
+                        <li class="listFooter item">
+                            <p><span class="subText">Teléfono:</span> +57 123 456 7890</p>
+                        </li>
+                        <li class="listFooter item">
+                            <p><span class="subText">Email:</span> info@colegiolospio.edu.co</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="infoSchedule">
+                    <h2>Horario de atención</h2>
+                    <ul class="listFooter">
+                        <li class="listFooter item">
+                            <p><span class="subText">Lunes a Viernes: </span> 8:00 am - 12:00 am</p>
+                        </li>
+                        <li class="listFooter item">
+                            <p><span class="subText">Sábados </span> 8:00 am - 11:00 am</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="columnFooter">
+                <div class="logoFooter"><img src="./IMG/Icons/Favicon.svg" alt="Logo en negro del colegio los pios"
+                        class="logoPIO"></div>
+                <div class="socialFooter">
+                    <img src="./IMG/Icons/facebook-svgrepo-com.svg" alt="Red social Facebook" class="logoSocials">
+                    <img src="./IMG/Icons/whatsapp-svgrepo-com.svg" alt="Red social 2" class="logoSocials">
+                    <img src="./IMG/Icons/instagram-svgrepo-com.svg" alt="Red social 2" class="logoSocials">
+                </div>
+            </div>
+            <div class="copyright">
+                <p><span class="subText">Derechos Reservados ©2024 Colegio los PIOS </span>| Todos los derechos
+                    reservados.</p><p>Iconos: 
+                    <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a> | Fotos: 
+                    <a href="https://www.educacionbogota.edu.co/" target="_blank">Secretaría de Educación de Bogotá</a></p>
+                <p>Diseñado y programado por JDCAST</p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./JS/iframe.js"></script>
+
+</html>
